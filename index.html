@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <style>
+      .thcol {
+        display: inline-block;
+        width: 120px;
+        border: solid 1px #909090;
+        background-color: #eeeeee;
+        text-align: center;
+        font-weight: bold;
+      }
+      .tdcol {
+        display: inline-block;
+        width: 120px;
+        border: solid 1px #909090;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <?= date ?>
+    <div>
+      <div>
+        <?!= exnames ?>
+      </div>
+      <div>
+        <?!= bids ?>
+      </div>
+      <div>
+        <?!= asks ?>
+      </div>
+      <div>
+        <?!= spreads ?>
+      </div>      
+    </div>
+    Buying at <?= top_ask ?> and selling at <?= top_bid ?> will make <?= difference ?>.
+    <script>
+      document.getElementById('<?= bid_id ?>').style.backgroundColor = "#ffa0a0";
+      document.getElementById('<?= ask_id ?>').style.backgroundColor = "#a0ffa0";
+    </script>
+  </body>
+</html>
